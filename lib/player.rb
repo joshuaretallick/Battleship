@@ -1,14 +1,18 @@
 class Player
   FULL_HEALTH = 60
-  attr_reader :name, :hp
+  attr_reader :name, :hit_points
 
-  def initialize(name, hp = FULL_HEALTH)
+  def initialize(name, hit_points = FULL_HEALTH)
     @name = name
-    @hp = hp
+    @hit_points = hit_points
   end
 
-  def damage
-    @hp -= 10
+  def attack(player)
+    player.receive_damage
+  end
+
+  def receive_damage
+    @hit_points -= 10
   end
 
 end
