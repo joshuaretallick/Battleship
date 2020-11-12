@@ -3,6 +3,9 @@ require_relative './lib/player.rb'
 
 class Battle < Sinatra::Base
 
+  enable :sessions
+  set :session_secret, "My session secret"
+
   get '/' do
     erb :index
   end
