@@ -3,7 +3,9 @@
 <h2 style="color:red;" align = center ><%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP</h2>
 </b>
 <h2 style="color:red;" align = center ><%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP</h2>
-<form action="/attack">
+<form action="/attack" method="post">
 <p align = center ><input type="submit" value="Attack">
 </form>
 <h3 align = center ><%= @game.current_turn.name %>'s turn</h3>
+</b>
+<p align = center ><img src="https://www.fightersgeneration.com/np/games/mk2-s2.jpg" alt="HYT">
