@@ -1,4 +1,10 @@
+<% if @game.current_turn == @game.player_1 %>
 <h1 style="color:red;" align = center ><%= @game.player_1.name%> attacked <%= @game.player_2.name%></h1>
+<% else %>
+<h1 style="color:red;" align = center ><%= @game.player_2.name%> attacked <%= @game.player_1.name%></h1>
+<% end %>
 </br>
 <p align = center ><img src="https://img1.svg.com/img/gallery/the-absolute-best-fatalities-in-every-mortal-kombat-game/intro-1549741813.jpg" alt="Streetfight KO">
-<p align = center ><a href="/play">OK</a>
+<form action="/switch-turns" method="post">
+<p align = center ><input type="submit" value="OK">
+</form>
